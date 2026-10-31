@@ -1,0 +1,89 @@
+{
+  "project": "AQI-Cast India",
+  "generated_at_utc": "2026-10-31T07:23:36.321645+00:00",
+  "python": {
+    "python_version": "3.14.7",
+    "implementation": "CPython",
+    "platform": "Windows",
+    "architecture": "AMD64",
+    "minimum_version_check": "PASS",
+    "recommended_version": "Python 3.11 (Python 3.10+ baseline)"
+  },
+  "packages": {
+    "numpy": "2.5.3",
+    "pandas": "3.0.6",
+    "matplotlib": "3.11.2",
+    "seaborn": "0.13.2",
+    "plotly": "7.1.0",
+    "scikit-learn": "1.9.1",
+    "PyYAML": "6.0.3",
+    "joblib": "1.6.0",
+    "jupyter": "Installed; version metadata unavailable",
+    "ipykernel": "7.3.0",
+    "nbformat": "5.11.1",
+    "psutil": "7.2.2"
+  },
+  "missing_foundation_dependencies": [],
+  "missing_later_phase_dependencies": [
+    "lightgbm",
+    "duckdb",
+    "pyarrow",
+    "mlflow",
+    "fastapi",
+    "pydantic",
+    "streamlit",
+    "SQLAlchemy",
+    "pytest",
+    "torch"
+  ],
+  "resources": {
+    "CPU logical cores": 16,
+    "Total memory (GiB)": 15.82,
+    "Available memory (GiB)": 2.71,
+    "GPU detected": true,
+    "GPU devices": [
+      "NVIDIA GeForce RTX 3050 Laptop GPU"
+    ],
+    "GPU detection method": "NVIDIA System Management Interface"
+  },
+  "reproducibility": {
+    "Python random seed": 42,
+    "NumPy": "Configured",
+    "PyTorch": "Not installed; GPU diagnostics remain optional",
+    "Forecast horizons (days)": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ]
+  },
+  "workspace_write_checks": {
+    "Image export area": true,
+    "Artifact export area": true,
+    "Configuration area": true
+  },
+  "configuration": {
+    "starter_created_in_this_run": true,
+    "yaml_available": true,
+    "validated": true,
+    "validation_messages": []
+  },
+  "project_conventions": {
+    "target_column": "AQI",
+    "city_column": "City",
+    "date_column": "Date",
+    "forecast_horizons_days": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "operating_mode": "historical_replay_and_backtesting"
+  }
+}
