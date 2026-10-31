@@ -1,0 +1,338 @@
+{
+  "manifest_version": "1.0",
+  "project": "AQI-Cast India",
+  "created_at_utc": "2026-10-31T07:30:36.488612+00:00",
+  "source": {
+    "title": "Air Quality Data in India (2015 - 2020)",
+    "provider": "Kaggle",
+    "dataset_handle": "rohanrao/air-quality-data-in-india",
+    "dataset_url": "https://www.kaggle.com/datasets/rohanrao/air-quality-data-in-india",
+    "metadata_url": "https://portal.transport-data.org/@tumi/urban-air-pollution-india-2015-2020",
+    "compiler": "Rohan Rao (as stated in the Transport Data Commons metadata record)",
+    "upstream_data_provider": "Central Pollution Control Board (CPCB), India",
+    "reference_period": {
+      "start": "2015-01-01",
+      "end": "2020-12-31",
+      "basis": "Transport Data Commons dataset metadata"
+    },
+    "metadata_listed_license": "CC0 1.0 (Transport Data Commons listing; verify the current Kaggle listing before redistribution)",
+    "live_data_available": false
+  },
+  "acquisition": {
+    "method": "kagglehub_download",
+    "acquired_at_utc": "2026-10-31T07:30:36.488630+00:00",
+    "primary_filename": "city_day.csv",
+    "encoding_used_for_primary_file": "utf-8-sig",
+    "kagglehub_used": true
+  },
+  "project_contract": {
+    "city_column": "City",
+    "date_column": "Date",
+    "target_column": "AQI",
+    "forecast_horizons_days": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "operating_mode": "historical_replay_and_backtesting"
+  },
+  "inventory": [
+    {
+      "filename": "city_day.csv",
+      "size_bytes": 2574056,
+      "size_mb": 2.455,
+      "row_count": 29531,
+      "columns": [
+        "City",
+        "Date",
+        "PM2.5",
+        "PM10",
+        "NO",
+        "NO2",
+        "NOx",
+        "NH3",
+        "CO",
+        "SO2",
+        "O3",
+        "Benzene",
+        "Toluene",
+        "Xylene",
+        "AQI",
+        "AQI_Bucket"
+      ],
+      "date_column": "Date",
+      "date_min": "2015-01-01",
+      "date_max": "2020-07-01",
+      "sha256": "0d84b21c3e4878bbad8df362f2ab05f61ad959538dddf5918e714077ed3c1847",
+      "scan_status": "completed"
+    },
+    {
+      "filename": "city_hour.csv",
+      "size_bytes": 65648581,
+      "size_mb": 62.607,
+      "row_count": 707875,
+      "columns": [
+        "City",
+        "Datetime",
+        "PM2.5",
+        "PM10",
+        "NO",
+        "NO2",
+        "NOx",
+        "NH3",
+        "CO",
+        "SO2",
+        "O3",
+        "Benzene",
+        "Toluene",
+        "Xylene",
+        "AQI",
+        "AQI_Bucket"
+      ],
+      "date_column": "Datetime",
+      "date_min": "2015-01-01",
+      "date_max": "2020-07-01",
+      "sha256": "fae474062ec6b10af7c5b2ac4e32f5c240a0ef80835ee3a50332fec06e2190a4",
+      "scan_status": "completed"
+    },
+    {
+      "filename": "station_day.csv",
+      "size_bytes": 8634105,
+      "size_mb": 8.234,
+      "row_count": 108035,
+      "columns": [
+        "StationId",
+        "Date",
+        "PM2.5",
+        "PM10",
+        "NO",
+        "NO2",
+        "NOx",
+        "NH3",
+        "CO",
+        "SO2",
+        "O3",
+        "Benzene",
+        "Toluene",
+        "Xylene",
+        "AQI",
+        "AQI_Bucket"
+      ],
+      "date_column": "Date",
+      "date_min": "2015-01-01",
+      "date_max": "2020-07-01",
+      "sha256": "f07787eb4c36c53b07763f591ee29fa01fbaa4d18df1a470447d04def79677b9",
+      "scan_status": "completed"
+    },
+    {
+      "filename": "station_hour.csv",
+      "size_bytes": 219675434,
+      "size_mb": 209.499,
+      "row_count": 2589083,
+      "columns": [
+        "StationId",
+        "Datetime",
+        "PM2.5",
+        "PM10",
+        "NO",
+        "NO2",
+        "NOx",
+        "NH3",
+        "CO",
+        "SO2",
+        "O3",
+        "Benzene",
+        "Toluene",
+        "Xylene",
+        "AQI",
+        "AQI_Bucket"
+      ],
+      "date_column": "Datetime",
+      "date_min": "2015-01-01",
+      "date_max": "2020-07-01",
+      "sha256": "26a423c66fe9763064d580ffb007150375cfa2056e62b29d52b1b7857af54fde",
+      "scan_status": "completed"
+    },
+    {
+      "filename": "stations.csv",
+      "size_bytes": 14467,
+      "size_mb": 0.014,
+      "row_count": 230,
+      "columns": [
+        "StationId",
+        "StationName",
+        "City",
+        "State",
+        "Status"
+      ],
+      "date_column": null,
+      "date_min": null,
+      "date_max": null,
+      "sha256": "ce2b7081c3e3c89145613eb724d7d2149ef79c6e16f36bb8a835747a673ed410",
+      "scan_status": "completed"
+    }
+  ],
+  "primary_dataset": {
+    "rows": 29531,
+    "columns": [
+      "City",
+      "Date",
+      "PM2.5",
+      "PM10",
+      "NO",
+      "NO2",
+      "NOx",
+      "NH3",
+      "CO",
+      "SO2",
+      "O3",
+      "Benzene",
+      "Toluene",
+      "Xylene",
+      "AQI",
+      "AQI_Bucket"
+    ],
+    "city_count": 26,
+    "date_min": "2015-01-01",
+    "date_max": "2020-07-01",
+    "valid_date_rows": 29531,
+    "invalid_or_missing_date_rows": 0,
+    "valid_numeric_aqi_rows": 24850,
+    "invalid_or_missing_aqi_rows": 4681,
+    "duplicate_city_date_rows": 0,
+    "missing_city_rows": 0,
+    "aqi_min": 13.0,
+    "aqi_max": 2049.0,
+    "negative_aqi_rows": 0,
+    "aqi_above_500_rows": 543,
+    "cities": [
+      "Ahmedabad",
+      "Aizawl",
+      "Amaravati",
+      "Amritsar",
+      "Bengaluru",
+      "Bhopal",
+      "Brajrajnagar",
+      "Chandigarh",
+      "Chennai",
+      "Coimbatore",
+      "Delhi",
+      "Ernakulam",
+      "Gurugram",
+      "Guwahati",
+      "Hyderabad",
+      "Jaipur",
+      "Jorapokhar",
+      "Kochi",
+      "Kolkata",
+      "Lucknow",
+      "Mumbai",
+      "Patna",
+      "Shillong",
+      "Talcher",
+      "Thiruvananthapuram",
+      "Visakhapatnam"
+    ],
+    "filename": "city_day.csv",
+    "dtypes": {
+      "City": "str",
+      "Date": "str",
+      "PM2.5": "float64",
+      "PM10": "float64",
+      "NO": "float64",
+      "NO2": "float64",
+      "NOx": "float64",
+      "NH3": "float64",
+      "CO": "float64",
+      "SO2": "float64",
+      "O3": "float64",
+      "Benzene": "float64",
+      "Toluene": "float64",
+      "Xylene": "float64",
+      "AQI": "float64",
+      "AQI_Bucket": "str"
+    },
+    "missing_values_by_column": {
+      "City": 0,
+      "Date": 0,
+      "PM2.5": 4598,
+      "PM10": 11140,
+      "NO": 3582,
+      "NO2": 3585,
+      "NOx": 4185,
+      "NH3": 10328,
+      "CO": 2059,
+      "SO2": 3854,
+      "O3": 4022,
+      "Benzene": 5623,
+      "Toluene": 8041,
+      "Xylene": 18109,
+      "AQI": 4681,
+      "AQI_Bucket": 4681
+    },
+    "missing_percentage_by_column": {
+      "City": 0.0,
+      "Date": 0.0,
+      "PM2.5": 15.5701,
+      "PM10": 37.7231,
+      "NO": 12.1296,
+      "NO2": 12.1398,
+      "NOx": 14.1715,
+      "NH3": 34.9734,
+      "CO": 6.9723,
+      "SO2": 13.0507,
+      "O3": 13.6196,
+      "Benzene": 19.041,
+      "Toluene": 27.229,
+      "Xylene": 61.322,
+      "AQI": 15.8511,
+      "AQI_Bucket": 15.8511
+    },
+    "minimum_schema_valid": true,
+    "validation_checks": [
+      {
+        "check": "Primary CSV present",
+        "passed": true
+      },
+      {
+        "check": "Dataset contains at least one row",
+        "passed": true
+      },
+      {
+        "check": "City field available",
+        "passed": true
+      },
+      {
+        "check": "Date field available",
+        "passed": true
+      },
+      {
+        "check": "AQI target available",
+        "passed": true
+      },
+      {
+        "check": "At least one valid date",
+        "passed": true
+      },
+      {
+        "check": "At least one valid numeric AQI",
+        "passed": true
+      },
+      {
+        "check": "At least one city identifier",
+        "passed": true
+      }
+    ]
+  },
+  "limitations": [
+    "The source is historical and does not provide real-time 2026 AQI observations.",
+    "The actual file list and schema were inspected at acquisition time; other dataset versions may differ.",
+    "This notebook does not clean, impute, interpolate, deduplicate, clip, or recalculate AQI values.",
+    "A valid schema does not establish data quality, representativeness, or forecasting performance.",
+    "The metadata-listed license should be checked against the current Kaggle listing before redistribution."
+  ]
+}
