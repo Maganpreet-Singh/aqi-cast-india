@@ -1,6 +1,3 @@
-Issue,Affected records
-Missing/blank city,0
-Invalid date,0
-Missing or non-numeric AQI,4681
-AQI outside 0–500,543
-Negative pollutant values,0
+version https://git-lfs.github.com/spec/v1
+oid sha256:924cade0dfe29319637c09cb00db3791e19a23c74589709141cdbd3fbf2eaba7
+size 149

@@ -1,9 +1,3 @@
-Metric,Value
-Raw source rows,29531
-Rows excluded for missing/invalid city or date,0
-Exact duplicate rows removed,0
-Duplicate City–Date groups reconciled,0
-Conflicting AQI duplicate groups,0
-Clean observed rows,29531
-Valid supervised AQI rows,24307
-Rows with missing AQI retained,5224
+version https://git-lfs.github.com/spec/v1
+oid sha256:6bde9178445b2bef2152c197f1c6f3b5c6a16b29f207b38e6d431b820436e00a
+size 295

@@ -1,1 +1,3 @@
-City,Date,AQI,AQI_Bucket,AQI_Bucket_derived,Recorded_normalized,Derived_normalized
+version https://git-lfs.github.com/spec/v1
+oid sha256:98542d98135f461eede90454e195ea5113ea8e91ce468412b76a6c8872911d57
+size 84

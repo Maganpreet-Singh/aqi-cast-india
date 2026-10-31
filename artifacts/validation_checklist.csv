@@ -1,10 +1,3 @@
-Check,Severity,Status,Observed,Rule
-Primary dataset is non-empty,Critical,PASS,29531,At least one source row
-Required City field exists,Critical,PASS,True,Column must exist
-Required Date field exists,Critical,PASS,True,Column must exist
-Required AQI field exists,Critical,PASS,True,Column must exist
-City identifiers are populated,Review,PASS,100.00% populated,No missing or blank City
-Dates parse successfully,Review,PASS,100.00% valid,All dates parse
-AQI lies on CPCB 0–500 scale,Review,REVIEW,82.31% in range,Numeric AQI between 0 and 500
-City–Date keys are unique,Review,PASS,0,No repeated City–Date key
-Exact duplicate rows absent,Review,PASS,0,No exact repeated row
+version https://git-lfs.github.com/spec/v1
+oid sha256:64f129c7de7c78c1a1ae0d8e34956cc30271cb67469dc9c2cfdd9b73c8d534f4
+size 1436

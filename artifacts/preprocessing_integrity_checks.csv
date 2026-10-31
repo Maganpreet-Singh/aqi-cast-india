@@ -1,7 +1,3 @@
-Check,Status
-Clean dataset has unique City–Date keys,PASS
-Clean dataset sorted by City and Date,PASS
-Supervised targets all lie in 0–500,PASS
-No AQI values created by forward fill,PASS
-Daily panel marks synthetic calendar rows,PASS
-Source dataframe remains untouched in memory,PASS
+version https://git-lfs.github.com/spec/v1
+oid sha256:4b340573d728ffcca77dcaa2a6b170b00b9f627f90e545e0e4501d6ed7324673
+size 293

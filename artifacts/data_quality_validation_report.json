@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 {
   "report_version": "1.0",
   "project": "AQI-Cast India",
@@ -403,3 +404,410 @@
     "No source rows are deleted, imputed, clipped, interpolated, or overwritten in this notebook."
   ]
 }
+=======
+{
+  "report_version": "1.0",
+  "project": "AQI-Cast India",
+  "notebook": "02_data_validation.ipynb",
+  "generated_at_utc": "2026-10-31T08:02:32.434730+00:00",
+  "source": {
+    "filename": "city_day.csv",
+    "dataset_handle": "rohanrao/air-quality-data-in-india",
+    "acquisition_method": "kagglehub_download",
+    "reference_period": {
+      "start": "2015-01-01",
+      "end": "2020-12-31"
+    },
+    "operating_mode": "historical_replay_and_backtesting",
+    "raw_source_modified": false
+  },
+  "dataset_shape": {
+    "rows": 29531,
+    "columns": 16
+  },
+  "schema": {
+    "required_columns": [
+      "City",
+      "Date",
+      "AQI"
+    ],
+    "available_columns": [
+      "City",
+      "Date",
+      "PM2.5",
+      "PM10",
+      "NO",
+      "NO2",
+      "NOx",
+      "NH3",
+      "CO",
+      "SO2",
+      "O3",
+      "Benzene",
+      "Toluene",
+      "Xylene",
+      "AQI",
+      "AQI_Bucket"
+    ],
+    "pollutant_columns_detected": [
+      "PM2.5",
+      "PM10",
+      "NO",
+      "NO2",
+      "NOx",
+      "NH3",
+      "CO",
+      "SO2",
+      "O3",
+      "Benzene",
+      "Toluene",
+      "Xylene"
+    ]
+  },
+  "date_coverage": {
+    "First observed date": "2015-01-01",
+    "Last observed date": "2020-07-01",
+    "Unique observed dates": 2009,
+    "Distinct calendar years": 6,
+    "Rows with valid dates": 29531
+  },
+  "city_count": 26,
+  "validity": {
+    "city_populated_pct": 100.0,
+    "date_parseable_pct": 100.0,
+    "aqi_in_cpcb_range_pct": 82.3101,
+    "invalid_dates": 0,
+    "invalid_or_missing_aqi": 5224,
+    "outside_reference_period_rows": 0
+  },
+  "duplicates": {
+    "exact_duplicate_rows_beyond_first": 0,
+    "city_date_duplicate_rows_beyond_first": 0,
+    "conflicting_city_date_groups": 0,
+    "city_label_variant_groups": 0
+  },
+  "coverage": {
+    "city_date_gap_events": 0,
+    "total_unobserved_calendar_days_across_gaps": 0
+  },
+  "pollutants": {
+    "columns_detected": [
+      "PM2.5",
+      "PM10",
+      "NO",
+      "NO2",
+      "NOx",
+      "NH3",
+      "CO",
+      "SO2",
+      "O3",
+      "Benzene",
+      "Toluene",
+      "Xylene"
+    ],
+    "invalid_records": 0,
+    "statistical_outlier_method": "IQR 1.5x and modified z-score using MAD > 3.5; review-only flags"
+  },
+  "aqi_categories": {
+    "scale": "CPCB 0-500",
+    "category_counts": {
+      "Good": 1341,
+      "Satisfactory": 8224,
+      "Moderate": 8829,
+      "Poor": 2781,
+      "Very Poor": 2337,
+      "Severe": 795
+    },
+    "recorded_bucket_mismatches": 0
+  },
+  "validation_gate": "PASS WITH REVIEW ITEMS",
+  "checks": [
+    {
+      "Check": "Primary dataset is non-empty",
+      "Severity": "Critical",
+      "Status": "PASS",
+      "Observed": 29531,
+      "Rule": "At least one source row"
+    },
+    {
+      "Check": "Required City field exists",
+      "Severity": "Critical",
+      "Status": "PASS",
+      "Observed": true,
+      "Rule": "Column must exist"
+    },
+    {
+      "Check": "Required Date field exists",
+      "Severity": "Critical",
+      "Status": "PASS",
+      "Observed": true,
+      "Rule": "Column must exist"
+    },
+    {
+      "Check": "Required AQI field exists",
+      "Severity": "Critical",
+      "Status": "PASS",
+      "Observed": true,
+      "Rule": "Column must exist"
+    },
+    {
+      "Check": "City identifiers are populated",
+      "Severity": "Review",
+      "Status": "PASS",
+      "Observed": "100.00% populated",
+      "Rule": "No missing or blank City"
+    },
+    {
+      "Check": "Dates parse successfully",
+      "Severity": "Review",
+      "Status": "PASS",
+      "Observed": "100.00% valid",
+      "Rule": "All dates parse"
+    },
+    {
+      "Check": "AQI lies on CPCB 0–500 scale",
+      "Severity": "Review",
+      "Status": "REVIEW",
+      "Observed": "82.31% in range",
+      "Rule": "Numeric AQI between 0 and 500"
+    },
+    {
+      "Check": "City–Date keys are unique",
+      "Severity": "Review",
+      "Status": "PASS",
+      "Observed": 0,
+      "Rule": "No repeated City–Date key"
+    },
+    {
+      "Check": "Exact duplicate rows absent",
+      "Severity": "Review",
+      "Status": "PASS",
+      "Observed": 0,
+      "Rule": "No exact repeated row"
+    }
+  ],
+  "quality_dimensions": [
+    {
+      "Dimension": "City completeness",
+      "Metric": "Rows with valid City",
+      "Value (%)": 100.0
+    },
+    {
+      "Dimension": "Date validity",
+      "Metric": "Rows with parseable Date",
+      "Value (%)": 100.0
+    },
+    {
+      "Dimension": "AQI validity",
+      "Metric": "Rows with numeric AQI in 0–500",
+      "Value (%)": 82.31
+    },
+    {
+      "Dimension": "Key uniqueness",
+      "Metric": "Unique valid City–Date keys / valid key rows",
+      "Value (%)": 100.0
+    }
+  ],
+  "visualizations": [
+    {
+      "filename": "validation_01_missingness_by_field.png",
+      "format": "png",
+      "library": "Matplotlib/Seaborn",
+      "static_export": true
+    },
+    {
+      "filename": "validation_02_missingness_pattern.png",
+      "format": "png",
+      "library": "Matplotlib/Seaborn",
+      "static_export": true
+    },
+    {
+      "filename": "validation_03_aqi_distribution.png",
+      "format": "png",
+      "library": "Matplotlib/Seaborn",
+      "static_export": true
+    },
+    {
+      "filename": "validation_04_aqi_category_distribution.png",
+      "format": "png",
+      "library": "Matplotlib/Seaborn",
+      "static_export": true
+    },
+    {
+      "filename": "validation_05_city_median_aqi.png",
+      "format": "png",
+      "library": "Matplotlib/Seaborn",
+      "static_export": true
+    },
+    {
+      "filename": "validation_06_yearly_aqi_trend.png",
+      "format": "png",
+      "library": "Matplotlib/Seaborn",
+      "static_export": true
+    },
+    {
+      "filename": "validation_07_monthly_aqi_seasonality.png",
+      "format": "png",
+      "library": "Matplotlib/Seaborn",
+      "static_export": true
+    },
+    {
+      "filename": "validation_08_city_observation_volume.png",
+      "format": "png",
+      "library": "Matplotlib/Seaborn",
+      "static_export": true
+    },
+    {
+      "filename": "validation_09_pollutant_correlation.png",
+      "format": "png",
+      "library": "Matplotlib/Seaborn",
+      "static_export": true
+    },
+    {
+      "filename": "validation_10_pollutant_distributions.png",
+      "format": "png",
+      "library": "Matplotlib/Seaborn",
+      "static_export": true
+    },
+    {
+      "filename": "validation_12_city_observed_date_coverage.png",
+      "format": "png",
+      "library": "Matplotlib/Seaborn",
+      "static_export": true
+    },
+    {
+      "filename": "validation_13_city_month_coverage_heatmap.png",
+      "format": "png",
+      "library": "Matplotlib/Seaborn",
+      "static_export": true
+    },
+    {
+      "filename": "validation_14_missing_fields_per_row.png",
+      "format": "png",
+      "library": "Matplotlib/Seaborn",
+      "static_export": true
+    },
+    {
+      "filename": "validation_16_pollutant_iqr_outlier_rate.png",
+      "format": "png",
+      "library": "Matplotlib/Seaborn",
+      "static_export": true
+    },
+    {
+      "filename": "validation_17_city_aqi_violin.png",
+      "format": "png",
+      "library": "Matplotlib/Seaborn",
+      "static_export": true
+    },
+    {
+      "filename": "validation_18_pm25_vs_aqi.png",
+      "format": "png",
+      "library": "Matplotlib/Seaborn",
+      "static_export": true
+    },
+    {
+      "filename": "validation_19_pm10_vs_aqi.png",
+      "format": "png",
+      "library": "Matplotlib/Seaborn",
+      "static_export": true
+    },
+    {
+      "filename": "validation_20_selected_city_aqi_timeseries.png",
+      "format": "png",
+      "library": "Matplotlib/Seaborn",
+      "static_export": true
+    },
+    {
+      "filename": "plotly_01_city_aqi_distribution.html",
+      "format": "html",
+      "library": "Plotly",
+      "static_export": false
+    },
+    {
+      "filename": "plotly_01_city_aqi_distribution.png",
+      "format": "png",
+      "library": "Plotly",
+      "static_export": true
+    },
+    {
+      "filename": "plotly_02_monthly_aqi_trend.html",
+      "format": "html",
+      "library": "Plotly",
+      "static_export": false
+    },
+    {
+      "filename": "plotly_02_monthly_aqi_trend.png",
+      "format": "png",
+      "library": "Plotly",
+      "static_export": true
+    },
+    {
+      "filename": "plotly_03_city_coverage_profile.html",
+      "format": "html",
+      "library": "Plotly",
+      "static_export": false
+    },
+    {
+      "filename": "plotly_03_city_coverage_profile.png",
+      "format": "png",
+      "library": "Plotly",
+      "static_export": true
+    },
+    {
+      "filename": "plotly_04_monthly_city_observation_heatmap.html",
+      "format": "html",
+      "library": "Plotly",
+      "static_export": false
+    },
+    {
+      "filename": "plotly_04_monthly_city_observation_heatmap.png",
+      "format": "png",
+      "library": "Plotly",
+      "static_export": true
+    },
+    {
+      "filename": "plotly_05_pm25_aqi_scatter.html",
+      "format": "html",
+      "library": "Plotly",
+      "static_export": false
+    },
+    {
+      "filename": "plotly_05_pm25_aqi_scatter.png",
+      "format": "png",
+      "library": "Plotly",
+      "static_export": true
+    },
+    {
+      "filename": "plotly_06_field_missingness.html",
+      "format": "html",
+      "library": "Plotly",
+      "static_export": false
+    },
+    {
+      "filename": "plotly_06_field_missingness.png",
+      "format": "png",
+      "library": "Plotly",
+      "static_export": true
+    },
+    {
+      "filename": "plotly_07_aqi_category_share.html",
+      "format": "html",
+      "library": "Plotly",
+      "static_export": false
+    },
+    {
+      "filename": "plotly_07_aqi_category_share.png",
+      "format": "png",
+      "library": "Plotly",
+      "static_export": true
+    }
+  ],
+  "limitations": [
+    "This notebook audits the supplied historical source; it does not provide live or real-time pollution measurements.",
+    "Missing city-date combinations are descriptive gaps, not proof of expected missing measurements.",
+    "Statistical outliers are review candidates and are not automatically invalid observations.",
+    "AQI category comparison checks the recorded AQI against the CPCB category bands; AQI is not recalculated from pollutants.",
+    "No source rows are deleted, imputed, clipped, interpolated, or overwritten in this notebook."
+  ]
+}
+>>>>>>> d1042c6e1152ac7241b903fbbe7b34bacbd4d107

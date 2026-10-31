@@ -1,8 +1,3 @@
-Metric,Value
-Rows,29531
-Columns,16
-Unique cities,26
-Valid dates,29531
-Valid numeric AQI,24850
-Complete City-Date-AQI rows,24850
-Pollutant fields detected,12
+version https://git-lfs.github.com/spec/v1
+oid sha256:2b29f980a4c89355fd053888863fb4a983a69c2d69bb0b3d12ecef1655855112
+size 392
