@@ -1,0 +1,5 @@
+Dimension,Metric,Value (%)
+City completeness,Rows with valid City,100.0
+Date validity,Rows with parseable Date,100.0
+AQI validity,Rows with numeric AQI in 0–500,82.31
+Key uniqueness,Unique valid City–Date keys / valid key rows,100.0
