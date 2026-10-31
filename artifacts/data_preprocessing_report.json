@@ -1,0 +1,245 @@
+{
+  "report_version": "1.0",
+  "project": "AQI-Cast India",
+  "notebook": "04_data_preprocessing.ipynb",
+  "generated_at_utc": "2026-10-31T08:33:07.430761+00:00",
+  "source": {
+    "filename": "city_day.csv",
+    "sha256": "3a0bd4da4f07b49e22485d558a71896a02e9da200af613c638d3758c6bc6c9af",
+    "raw_source_modified": false,
+    "source_rows": 29531
+  },
+  "configuration": {
+    "aqi_valid_range": [
+      0.0,
+      500.0
+    ],
+    "duplicate_numeric_aggregation": "median",
+    "duplicate_categorical_aggregation": "deterministic_mode",
+    "max_causal_pollutant_forward_fill_days": 3,
+    "aqi_imputation": "none",
+    "statistical_outlier_handling": "flag_only"
+  },
+  "row_counts": {
+    "eligible_city_date_rows": 29531,
+    "exact_duplicate_rows_removed": 0,
+    "clean_observed_rows": 29531,
+    "supervised_aqi_rows": 24307,
+    "daily_panel_rows": 29531
+  },
+  "issues": {
+    "excluded_missing_city_or_date": 0,
+    "invalid_aqi_values": 543,
+    "negative_pollutant_values": 0,
+    "duplicate_city_date_groups": 0,
+    "conflicting_aqi_duplicate_groups": 0,
+    "recorded_bucket_mismatches": 0
+  },
+  "cities": 26,
+  "date_coverage": {
+    "first": "2015-01-01",
+    "last": "2020-07-01"
+  },
+  "columns": {
+    "pollutants": [
+      "PM2.5",
+      "PM10",
+      "NO",
+      "NO2",
+      "NOx",
+      "NH3",
+      "CO",
+      "SO2",
+      "O3",
+      "Benzene",
+      "Toluene",
+      "Xylene"
+    ],
+    "numeric_measures": [
+      "AQI",
+      "PM2.5",
+      "PM10",
+      "NO",
+      "NO2",
+      "NOx",
+      "NH3",
+      "CO",
+      "SO2",
+      "O3",
+      "Benzene",
+      "Toluene",
+      "Xylene"
+    ]
+  },
+  "integrity_checks": [
+    {
+      "Check": "Clean dataset has unique City–Date keys",
+      "Status": "PASS"
+    },
+    {
+      "Check": "Clean dataset sorted by City and Date",
+      "Status": "PASS"
+    },
+    {
+      "Check": "Supervised targets all lie in 0–500",
+      "Status": "PASS"
+    },
+    {
+      "Check": "No AQI values created by forward fill",
+      "Status": "PASS"
+    },
+    {
+      "Check": "Daily panel marks synthetic calendar rows",
+      "Status": "PASS"
+    },
+    {
+      "Check": "Source dataframe remains untouched in memory",
+      "Status": "PASS"
+    }
+  ],
+  "visualizations": [
+    {
+      "filename": "preprocessing_missingness_before_after.png",
+      "format": "png",
+      "library": "Matplotlib/Seaborn"
+    },
+    {
+      "filename": "preprocessing_issue_counts.png",
+      "format": "png",
+      "library": "Matplotlib/Seaborn"
+    },
+    {
+      "filename": "preprocessing_row_stage_counts.png",
+      "format": "png",
+      "library": "Matplotlib/Seaborn"
+    },
+    {
+      "filename": "preprocessing_aqi_distribution_comparison.png",
+      "format": "png",
+      "library": "Matplotlib/Seaborn"
+    },
+    {
+      "filename": "preprocessing_aqi_target_availability.png",
+      "format": "png",
+      "library": "Matplotlib/Seaborn"
+    },
+    {
+      "filename": "preprocessing_pollutant_distributions.png",
+      "format": "png",
+      "library": "Matplotlib/Seaborn"
+    },
+    {
+      "filename": "preprocessing_cleaned_correlation_heatmap.png",
+      "format": "png",
+      "library": "Matplotlib/Seaborn"
+    },
+    {
+      "filename": "preprocessing_pairplot_aqi_pollutants.png",
+      "format": "png",
+      "library": "Seaborn"
+    },
+    {
+      "filename": "preprocessing_matplotlib_3d_pollutant_space.png",
+      "format": "png",
+      "library": "Matplotlib/Seaborn"
+    },
+    {
+      "filename": "preprocessing_plotly_3d_pollutant_space.html",
+      "format": "html",
+      "library": "Plotly"
+    },
+    {
+      "filename": "preprocessing_plotly_3d_pollutant_space.png",
+      "format": "png",
+      "library": "Plotly"
+    },
+    {
+      "filename": "preprocessing_cleaned_rows_by_city.png",
+      "format": "png",
+      "library": "Matplotlib/Seaborn"
+    },
+    {
+      "filename": "preprocessing_city_date_coverage.png",
+      "format": "png",
+      "library": "Matplotlib/Seaborn"
+    },
+    {
+      "filename": "preprocessing_monthly_observation_volume.png",
+      "format": "png",
+      "library": "Matplotlib/Seaborn"
+    },
+    {
+      "filename": "preprocessing_daily_panel_carried_values.png",
+      "format": "png",
+      "library": "Matplotlib/Seaborn"
+    },
+    {
+      "filename": "preprocessing_plotly_daily_panel_coverage.html",
+      "format": "html",
+      "library": "Plotly"
+    },
+    {
+      "filename": "preprocessing_plotly_daily_panel_coverage.png",
+      "format": "png",
+      "library": "Plotly"
+    },
+    {
+      "filename": "preprocessing_plotly_cleaned_aqi_timeline.html",
+      "format": "html",
+      "library": "Plotly"
+    },
+    {
+      "filename": "preprocessing_plotly_cleaned_aqi_timeline.png",
+      "format": "png",
+      "library": "Plotly"
+    },
+    {
+      "filename": "preprocessing_plotly_missingness_comparison.html",
+      "format": "html",
+      "library": "Plotly"
+    },
+    {
+      "filename": "preprocessing_plotly_missingness_comparison.png",
+      "format": "png",
+      "library": "Plotly"
+    },
+    {
+      "filename": "preprocessing_plotly_cleaned_correlation.html",
+      "format": "html",
+      "library": "Plotly"
+    },
+    {
+      "filename": "preprocessing_plotly_cleaned_correlation.png",
+      "format": "png",
+      "library": "Plotly"
+    },
+    {
+      "filename": "preprocessing_plotly_outlier_review.html",
+      "format": "html",
+      "library": "Plotly"
+    },
+    {
+      "filename": "preprocessing_plotly_outlier_review.png",
+      "format": "png",
+      "library": "Plotly"
+    },
+    {
+      "filename": "preprocessing_plotly_target_missingness_by_city.html",
+      "format": "html",
+      "library": "Plotly"
+    },
+    {
+      "filename": "preprocessing_plotly_target_missingness_by_city.png",
+      "format": "png",
+      "library": "Plotly"
+    }
+  ],
+  "limitations": [
+    "Historical dataset; not a real-time AQI feed.",
+    "Missing AQI values were not imputed.",
+    "Pollutant forward filling in the daily panel is past-only and limited to the configured number of calendar days.",
+    "Statistical outliers were retained and exported for review.",
+    "Duplicate City–Date groups were reconciled using median/mode aggregation; inspect the conflict audit.",
+    "Model-fold-specific imputers should be fitted only on each chronological training fold."
+  ]
+}

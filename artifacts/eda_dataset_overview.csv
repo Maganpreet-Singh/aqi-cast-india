@@ -1,0 +1,8 @@
+Metric,Value
+Rows,29531
+Columns,16
+Unique cities,26
+Valid dates,29531
+Valid numeric AQI,24850
+Complete City-Date-AQI rows,24850
+Pollutant fields detected,12

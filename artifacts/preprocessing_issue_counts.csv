@@ -1,0 +1,6 @@
+Issue,Affected records
+Missing/blank city,0
+Invalid date,0
+Missing or non-numeric AQI,4681
+AQI outside 0–500,543
+Negative pollutant values,0

@@ -1,0 +1,356 @@
+{
+  "project": "AQI-Cast India",
+  "notebook": "03_exploratory_data_analysis.ipynb",
+  "generated_at_utc": "2026-10-31T08:19:59.498644+00:00",
+  "dataset": {
+    "rows": 29531,
+    "columns": 16,
+    "cities_with_valid_aqi": 26,
+    "first_observed_date": "2015-01-01",
+    "last_observed_date": "2020-07-01",
+    "pollutant_fields": [
+      "PM2.5",
+      "PM10",
+      "NO",
+      "NO2",
+      "NOx",
+      "NH3",
+      "CO",
+      "SO2",
+      "O3",
+      "Benzene",
+      "Toluene",
+      "Xylene"
+    ]
+  },
+  "aqi": {
+    "mean": 166.4635814889336,
+    "median": 118.0,
+    "std": 140.69658509414904,
+    "minimum": 13.0,
+    "maximum": 2049.0
+  },
+  "top_cities_by_observation_count": {
+    "Delhi": 1999,
+    "Bengaluru": 1910,
+    "Lucknow": 1893,
+    "Chennai": 1884,
+    "Hyderabad": 1880,
+    "Patna": 1459,
+    "Gurugram": 1453,
+    "Ahmedabad": 1334,
+    "Visakhapatnam": 1171,
+    "Amritsar": 1126
+  },
+  "highest_median_aqi_cities": [
+    {
+      "City_clean": "Ahmedabad",
+      "Median": 384.5,
+      "Observations": 1334
+    },
+    {
+      "City_clean": "Delhi",
+      "Median": 257.0,
+      "Observations": 1999
+    },
+    {
+      "City_clean": "Patna",
+      "Median": 215.0,
+      "Observations": 1459
+    },
+    {
+      "City_clean": "Gurugram",
+      "Median": 208.0,
+      "Observations": 1453
+    },
+    {
+      "City_clean": "Lucknow",
+      "Median": 198.0,
+      "Observations": 1893
+    },
+    {
+      "City_clean": "Jorapokhar",
+      "Median": 133.0,
+      "Observations": 771
+    },
+    {
+      "City_clean": "Talcher",
+      "Median": 128.5,
+      "Observations": 698
+    },
+    {
+      "City_clean": "Jaipur",
+      "Median": 122.0,
+      "Observations": 1094
+    },
+    {
+      "City_clean": "Brajrajnagar",
+      "Median": 122.0,
+      "Observations": 713
+    },
+    {
+      "City_clean": "Bhopal",
+      "Median": 120.0,
+      "Observations": 278
+    }
+  ],
+  "strongest_absolute_pollutant_correlations": {
+    "NH3": 0.13175631192483464,
+    "SO2": 0.10530628945993636,
+    "NOx": 0.10213102373798151,
+    "PM10": 0.09864693163442487,
+    "CO": 0.0961984161926038,
+    "PM2.5": 0.06705231872267324,
+    "NO2": 0.059632990759724766,
+    "NO": 0.050917822223243384
+  },
+  "visualizations": [
+    {
+      "filename": "eda_missingness_profile.png",
+      "format": "png",
+      "library": "Matplotlib/Seaborn"
+    },
+    {
+      "filename": "eda_aqi_distribution.png",
+      "format": "png",
+      "library": "Matplotlib/Seaborn"
+    },
+    {
+      "filename": "eda_aqi_ecdf.png",
+      "format": "png",
+      "library": "Matplotlib/Seaborn"
+    },
+    {
+      "filename": "eda_aqi_boxplot.png",
+      "format": "png",
+      "library": "Matplotlib/Seaborn"
+    },
+    {
+      "filename": "eda_aqi_violin.png",
+      "format": "png",
+      "library": "Matplotlib/Seaborn"
+    },
+    {
+      "filename": "eda_aqi_category_counts.png",
+      "format": "png",
+      "library": "Matplotlib/Seaborn"
+    },
+    {
+      "filename": "eda_aqi_category_frequency.png",
+      "format": "png",
+      "library": "Matplotlib/Seaborn"
+    },
+    {
+      "filename": "eda_city_median_aqi_top15.png",
+      "format": "png",
+      "library": "Matplotlib/Seaborn"
+    },
+    {
+      "filename": "eda_city_observation_counts.png",
+      "format": "png",
+      "library": "Matplotlib/Seaborn"
+    },
+    {
+      "filename": "eda_city_aqi_boxplots.png",
+      "format": "png",
+      "library": "Matplotlib/Seaborn"
+    },
+    {
+      "filename": "eda_city_aqi_violins.png",
+      "format": "png",
+      "library": "Matplotlib/Seaborn"
+    },
+    {
+      "filename": "eda_city_coverage_vs_median_aqi.png",
+      "format": "png",
+      "library": "Matplotlib/Seaborn"
+    },
+    {
+      "filename": "eda_city_category_composition_heatmap.png",
+      "format": "png",
+      "library": "Matplotlib/Seaborn"
+    },
+    {
+      "filename": "eda_annual_mean_aqi.png",
+      "format": "png",
+      "library": "Matplotlib/Seaborn"
+    },
+    {
+      "filename": "eda_month_of_year_aqi.png",
+      "format": "png",
+      "library": "Matplotlib/Seaborn"
+    },
+    {
+      "filename": "eda_year_month_aqi_heatmap.png",
+      "format": "png",
+      "library": "Matplotlib/Seaborn"
+    },
+    {
+      "filename": "eda_monthly_aqi_trend.png",
+      "format": "png",
+      "library": "Matplotlib/Seaborn"
+    },
+    {
+      "filename": "eda_weekday_aqi.png",
+      "format": "png",
+      "library": "Matplotlib/Seaborn"
+    },
+    {
+      "filename": "eda_seasonal_aqi.png",
+      "format": "png",
+      "library": "Matplotlib/Seaborn"
+    },
+    {
+      "filename": "eda_seasonal_aqi_boxplot.png",
+      "format": "png",
+      "library": "Matplotlib/Seaborn"
+    },
+    {
+      "filename": "eda_city_annual_trends.png",
+      "format": "png",
+      "library": "Matplotlib/Seaborn"
+    },
+    {
+      "filename": "eda_daily_city_trajectories.png",
+      "format": "png",
+      "library": "Matplotlib/Seaborn"
+    },
+    {
+      "filename": "eda_rolling_aqi_selected_cities.png",
+      "format": "png",
+      "library": "Matplotlib/Seaborn"
+    },
+    {
+      "filename": "eda_city_date_coverage.png",
+      "format": "png",
+      "library": "Matplotlib/Seaborn"
+    },
+    {
+      "filename": "eda_daily_observation_volume.png",
+      "format": "png",
+      "library": "Matplotlib/Seaborn"
+    },
+    {
+      "filename": "eda_pollutant_missingness.png",
+      "format": "png",
+      "library": "Matplotlib/Seaborn"
+    },
+    {
+      "filename": "eda_pollutant_correlation_heatmap.png",
+      "format": "png",
+      "library": "Matplotlib/Seaborn"
+    },
+    {
+      "filename": "eda_aqi_pollutant_correlations.png",
+      "format": "png",
+      "library": "Matplotlib/Seaborn"
+    },
+    {
+      "filename": "eda_pollutant_concentration_boxplots.png",
+      "format": "png",
+      "library": "Matplotlib/Seaborn"
+    },
+    {
+      "filename": "eda_pairplot_aqi_pollutants.png",
+      "format": "png",
+      "library": "Seaborn"
+    },
+    {
+      "filename": "eda_pollutant_scatter_coloured_by_aqi.png",
+      "format": "png",
+      "library": "Matplotlib/Seaborn"
+    },
+    {
+      "filename": "eda_matplotlib_3d_pollutant_space.png",
+      "format": "png",
+      "library": "Matplotlib/Seaborn"
+    },
+    {
+      "filename": "eda_plotly_3d_pollutant_space.html",
+      "format": "html",
+      "library": "Plotly"
+    },
+    {
+      "filename": "eda_plotly_3d_pollutant_space.png",
+      "format": "png",
+      "library": "Plotly"
+    },
+    {
+      "filename": "eda_plotly_city_aqi_timeline.html",
+      "format": "html",
+      "library": "Plotly"
+    },
+    {
+      "filename": "eda_plotly_city_aqi_timeline.png",
+      "format": "png",
+      "library": "Plotly"
+    },
+    {
+      "filename": "eda_plotly_monthly_aqi_trend.html",
+      "format": "html",
+      "library": "Plotly"
+    },
+    {
+      "filename": "eda_plotly_monthly_aqi_trend.png",
+      "format": "png",
+      "library": "Plotly"
+    },
+    {
+      "filename": "eda_plotly_city_comparison.html",
+      "format": "html",
+      "library": "Plotly"
+    },
+    {
+      "filename": "eda_plotly_city_comparison.png",
+      "format": "png",
+      "library": "Plotly"
+    },
+    {
+      "filename": "eda_plotly_pollutant_correlation.html",
+      "format": "html",
+      "library": "Plotly"
+    },
+    {
+      "filename": "eda_plotly_pollutant_correlation.png",
+      "format": "png",
+      "library": "Plotly"
+    },
+    {
+      "filename": "eda_plotly_aqi_category_composition.html",
+      "format": "html",
+      "library": "Plotly"
+    },
+    {
+      "filename": "eda_plotly_aqi_category_composition.png",
+      "format": "png",
+      "library": "Plotly"
+    },
+    {
+      "filename": "eda_plotly_city_date_coverage.html",
+      "format": "html",
+      "library": "Plotly"
+    },
+    {
+      "filename": "eda_plotly_city_date_coverage.png",
+      "format": "png",
+      "library": "Plotly"
+    },
+    {
+      "filename": "eda_plotly_weekday_aqi.html",
+      "format": "html",
+      "library": "Plotly"
+    },
+    {
+      "filename": "eda_plotly_weekday_aqi.png",
+      "format": "png",
+      "library": "Plotly"
+    }
+  ],
+  "limitations": [
+    "Historical observations only; not a real-time AQI feed.",
+    "Descriptive associations do not establish causality.",
+    "Coverage and missingness differ across cities and variables.",
+    "Pairplot and dense scatter visualizations use reproducible display samples.",
+    "No source records were imputed, clipped, deduplicated, or overwritten."
+  ]
+}

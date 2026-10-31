@@ -1,0 +1,7 @@
+Check,Status
+Clean dataset has unique City–Date keys,PASS
+Clean dataset sorted by City and Date,PASS
+Supervised targets all lie in 0–500,PASS
+No AQI values created by forward fill,PASS
+Daily panel marks synthetic calendar rows,PASS
+Source dataframe remains untouched in memory,PASS

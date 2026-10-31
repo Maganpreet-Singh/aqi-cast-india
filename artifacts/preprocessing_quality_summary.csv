@@ -1,0 +1,9 @@
+Metric,Value
+Raw source rows,29531
+Rows excluded for missing/invalid city or date,0
+Exact duplicate rows removed,0
+Duplicate City–Date groups reconciled,0
+Conflicting AQI duplicate groups,0
+Clean observed rows,29531
+Valid supervised AQI rows,24307
+Rows with missing AQI retained,5224
